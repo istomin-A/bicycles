@@ -1,0 +1,829 @@
+// * import functions
+@use 'tools/functions' as func;
+// * import variables
+@use 'tools/variables' as var;
+
+// =======================================================================================================
+.intro {
+    padding: func.rem(185) func.rem(0) func.rem(200) func.rem(0);
+    background: center/ cover no-repeat url("../img/intro/bg.jpg");
+
+    @media (max-width: var.$tablet) {
+        padding: func.rem(155) func.rem(0) func.rem(100) func.rem(0);
+    }
+
+    @media (max-width: var.$mobile) {
+        padding: func.rem(130) func.rem(0) func.rem(100) func.rem(0);
+    }
+
+    @media (max-width: var.$mobileSmall) {
+        background-position: 62%;
+    }
+
+    &__container {}
+
+    &__title {
+        font-family: var.$secondFont;
+        font-weight: 600;
+        font-size: func.rem(110);
+        line-height: func.part(135, 110);
+        color: var.$mainWhiteColor;
+        max-width: func.rem(680);
+        margin: func.rem(0) func.rem(0) func.rem(30) func.rem(0);
+
+        @media (max-width: var.$tablet) {
+            font-size: func.rem(80);
+            max-width: func.rem(600);
+        }
+
+        @media (max-width: var.$mobile) {
+            font-size: func.rem(60);
+            margin: func.rem(0) func.rem(0) func.rem(10) func.rem(0);
+        }
+
+        @media (max-width: var.$mobileSmall) {
+            font-size: func.rem(42);
+        }
+    }
+
+    &__text {
+        max-width: func.rem(600);
+
+        &:not(:last-child) {
+            margin: func.rem(0) func.rem(0) func.rem(30) func.rem(0);
+        }
+
+        @media (max-width: var.$mobile) {
+            max-width: func.rem(500);
+
+            &:not(:last-child) {
+                margin: func.rem(0) func.rem(0) func.rem(15) func.rem(0);
+            }
+        }
+    }
+
+    &__button {}
+}
+
+// =======================================================================================================
+.sub-intro {
+
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        @media (max-width: var.$tablet) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: func.rem(30);
+        width: 100%;
+        padding: func.rem(51) func.rem(0);
+        transition: transform 0.5s ease 0s, border-radius 0.5s ease 0s;
+        position: relative;
+        z-index: 2;
+
+        @media (any-hover: hover) {
+            &:hover {
+                transform: scale(1.2);
+                z-index: 3;
+            }
+        }
+
+        @media (max-width: var.$tablet) {
+            gap: func.rem(10);
+        }
+
+        &_first {
+            padding: func.rem(51) func.rem(70) func.rem(51) func.rem(20);
+            align-items: end;
+            background-color: var.$mainBlackColor;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    border-radius: 0px func.rem(10) func.rem(10) 0px;
+                }
+            }
+
+            @media (max-width: var.$tablet) {
+                align-items: center;
+                padding: func.rem(25) func.rem(20);
+            }
+        }
+
+        &_center {
+            background-color: var.$bannerColor;
+            align-items: center;
+            padding: func.rem(51) func.rem(20);
+
+            @media (any-hover: hover) {
+                &:hover {
+                    border-radius: func.rem(10);
+                }
+            }
+
+            @media (max-width: var.$tablet) {
+                padding: func.rem(25) func.rem(20);
+            }
+        }
+
+        &_last {
+            background-color: var.$itemBgColor;
+            padding: func.rem(51) func.rem(20) func.rem(51) func.rem(70);
+
+            @media (any-hover: hover) {
+                &:hover {
+                    border-radius: func.rem(10) 0px 0px func.rem(10);
+                }
+            }
+
+            @media (max-width: var.$tablet) {
+                align-items: center;
+                padding: func.rem(25) func.rem(20);
+            }
+        }
+    }
+
+    &__text {
+        flex: 1 1 auto;
+        font-weight: 500;
+        font-size: func.rem(24);
+        line-height: func.part(38, 24);
+        color: var.$mainWhiteColor;
+        max-width: func.rem(300);
+
+        @media (max-width: var.$tablet) {
+            font-size: func.rem(20);
+        }
+
+        @media (max-width: var.$mobile) {
+            font-size: func.rem(18);
+        }
+    }
+
+    &__link {
+        max-width: func.rem(300);
+        width: 100%;
+
+        a {
+            font-weight: 500;
+            font-size: func.rem(16);
+            line-height: func.part(20, 16);
+            color: var.$mainWhiteColor;
+            transition: color 0.5s ease 0s;
+
+            &::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+            }
+
+            @media (any-hover: hover) {
+                &:hover {
+                    color: var.$mainOrangeColor;
+                }
+            }
+        }
+    }
+}
+
+// =======================================================================================================
+.product-slider {
+    padding: func.rem(80) func.rem(0);
+    background-color: var.$bgColor;
+
+    @media (max-width: var.$tablet) {
+        padding: func.rem(45) func.rem(0);
+    }
+
+    @media (max-width: var.$mobile) {
+        padding: func.rem(30) func.rem(0);
+    }
+
+    &__container {}
+
+    &__title {
+        margin: func.rem(0) func.rem(0) func.rem(50) func.rem(0);
+
+        @media (max-width: var.$tablet) {
+            margin: func.rem(0) func.rem(0) func.rem(20) func.rem(0);
+        }
+    }
+
+    &__slider {
+        &:not(:last-child) {
+            margin: func.rem(0) func.rem(0) func.rem(40) func.rem(0);
+        }
+    }
+
+    &__swiper {}
+
+    &__slide {}
+
+    &__inner {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__more {
+        color: var.$greyTwoColor;
+        text-transform: uppercase;
+        line-height: func.part(20, 16);
+        position: relative;
+
+        @media (min-width: var.$tablet) {
+            &::before {
+                content: '';
+                display: block;
+                width: 0;
+                height: func.rem(2);
+                background-color: var.$greyTwoColor;
+                position: absolute;
+                bottom: func.rem(-2);
+                left: 0;
+                transition: width 0.5s ease 0s;
+            }
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                &::before {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+// =======================================================================================================
+.catalog-intro {
+    padding: func.rem(80) func.rem(0);
+
+    @media (max-width: var.$tablet) {
+        padding: func.rem(45) func.rem(0);
+    }
+
+    @media (max-width: var.$mobile) {
+        padding: func.rem(30) func.rem(0);
+    }
+
+    &__container {}
+
+    &__title {
+        margin: func.rem(0) func.rem(0) func.rem(50) func.rem(0);
+
+        @media (max-width: var.$tablet) {
+            margin: func.rem(0) func.rem(0) func.rem(20) func.rem(0);
+        }
+    }
+
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) 1.2fr;
+        gap: func.rem(16);
+
+        @media (max-width: var.$tablet) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: var.$mobile) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item {
+        display: block;
+        background: var.$mainBlackColor;
+        border-radius: func.rem(10);
+        padding: func.rem(40);
+        min-height: func.rem(190);
+        position: relative;
+        overflow: hidden;
+        transition: background 1.8s ease 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background: var.$mainOrangeColor;
+            }
+        }
+
+        @media (max-width: var.$mobileSmall) {
+            min-height: func.rem(120);
+        }
+
+        &_full-row {
+            grid-column: 1/4;
+            min-height: func.rem(250);
+
+            @media (max-width: var.$tablet) {
+                grid-column: 1/3;
+                min-height: func.rem(190);
+            }
+
+            @media (max-width: var.$mobileSmall) {
+                min-height: func.rem(120);
+            }
+        }
+
+        &_full-column {
+            grid-row: 2/4;
+
+            @media (max-width: var.$tablet) {
+                grid-row: 2;
+                grid-column: 1/3;
+            }
+        }
+
+        &_bottom {
+            @media (min-width: var.$tablet) {
+                grid-row: 3;
+                margin: func.rem(-50) func.rem(0) func.rem(0) func.rem(0);
+            }
+
+            @media (max-width: var.$mobile) {
+                grid-row: 4;
+                grid-column: 1/3;
+            }
+        }
+
+        &_small {
+            height: func.rem(190);
+
+            @media (max-width: var.$mobile) {
+                grid-column: 1/3;
+            }
+
+            @media (max-width: var.$mobileSmall) {
+                height: func.rem(120);
+            }
+        }
+
+        &_little-big {
+            min-height: func.rem(240);
+
+            @media (max-width: var.$tablet) {
+                min-height: func.rem(190);
+            }
+
+            @media (max-width: var.$mobile) {
+                grid-row: 5;
+                grid-column: 1/3;
+            }
+
+            @media (max-width: var.$mobileSmall) {
+                min-height: func.rem(120);
+            }
+        }
+
+        &_adaptive {
+            @media (max-width: var.$mobile) {
+                grid-row: 6;
+                grid-column: 1/3;
+            }
+        }
+    }
+
+    &__span {
+        display: inline-block;
+        color: var.$mainWhiteColor;
+        position: relative;
+        z-index: 2;
+        font-size: func.rem(40);
+
+        @media (max-width: var.$tablet) {
+            font-size: func.rem(30);
+        }
+
+        &_center-y {
+
+            @media (min-width: var.$tablet) {
+                position: absolute;
+                top: 50%;
+                left: func.rem(40);
+                transform: translateY(-50%);
+            }
+        }
+
+        &_center-x {
+
+            @media (min-width: var.$tablet) {
+                position: absolute;
+                top: func.rem(80);
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        &_bottom {
+
+            @media (min-width: var.$tablet) {
+                position: absolute;
+                bottom: func.rem(30);
+            }
+        }
+
+        &_text-less {
+
+            @media (max-width: func.em(1301, 16)) {
+                font-size: func.rem(36);
+            }
+
+            @media (max-width: func.em(1101, 16)) {
+                font-size: func.rem(32);
+            }
+
+            @media (max-width: var.$tablet) {
+                font-size: func.rem(30);
+            }
+        }
+    }
+
+    &__img {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        pointer-events: none;
+
+        &_top {
+
+            @media (min-width: var.$tablet) {
+                top: 0;
+            }
+
+            @media (max-width: var.$tablet) {
+                width: func.rem(200);
+                height: func.rem(120);
+                bottom: func.rem(-25);
+            }
+
+            @media (max-width: var.$mobileSmall) {
+                display: none;
+            }
+        }
+
+        &_bicycle-stands {
+            @media (max-width: var.$tablet) {
+                width: func.rem(170);
+                height: func.rem(150);
+            }
+
+            @media (max-width: var.$mobileSmall) {
+                display: none;
+            }
+        }
+
+        &_equipment {
+            @media (max-width: var.$tablet) {
+                width: func.rem(200);
+                height: func.rem(120);
+            }
+
+            @media (max-width: var.$mobileSmall) {
+                display: none;
+            }
+        }
+
+        &_spare-parts {
+            @media (max-width: var.$tablet) {
+                width: func.rem(100);
+                height: func.rem(150);
+            }
+
+            @media (max-width: var.$mobileSmall) {
+                display: none;
+            }
+        }
+
+        &_trade-in {
+            @media (max-width: var.$tablet) {
+                width: func.rem(300);
+                height: func.rem(190);
+            }
+
+            @media (max-width: var.$mobileSmall) {
+                display: none;
+            }
+        }
+
+        &_bike {
+            @media (max-width: var.$tablet) {
+                width: func.rem(450);
+                height: func.rem(190);
+            }
+
+            @media (max-width: var.$mobileSmall) {
+                display: none;
+            }
+        }
+    }
+}
+
+// =======================================================================================================
+.best {
+    padding: func.rem(80) func.rem(0);
+    background: var.$mainBlackColor;
+
+    @media (max-width: var.$tablet) {
+        padding: func.rem(45) func.rem(0);
+    }
+
+    @media (max-width: var.$mobile) {
+        padding: func.rem(30) func.rem(0);
+    }
+
+    &_no-bg {
+        background-color: var.$mainWhiteColor;
+    }
+
+    &__container {}
+
+    &__title {
+        max-width: func.rem(500);
+        color: var.$mainWhiteColor;
+        margin: func.rem(0) func.rem(0) func.rem(50) func.rem(0);
+
+        @media (max-width: var.$tablet) {
+            margin: func.rem(0) func.rem(0) func.rem(20) func.rem(0);
+        }
+
+        &_black {
+            color: var.$mainBlackColor;
+            max-width: func.rem(550);
+        }
+    }
+}
+
+// =======================================================================================================
+.bikes {
+    padding: func.rem(80) func.rem(0);
+    background: var.$bgColor;
+
+    @media (max-width: var.$tablet) {
+        padding: func.rem(45) func.rem(0);
+    }
+
+    @media (max-width: var.$mobile) {
+        padding: func.rem(30) func.rem(0);
+    }
+
+    &__container {}
+
+    &__title {
+        max-width: func.rem(400);
+        margin: func.rem(0) func.rem(0) func.rem(50) func.rem(0);
+
+        @media (max-width: var.$tablet) {
+            margin: func.rem(0) func.rem(0) func.rem(20) func.rem(0);
+        }
+    }
+
+    &__body {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: func.rem(150);
+
+        @media (max-width: func.em(1201, 16)) {
+            gap: func.rem(40);
+        }
+
+        @media (max-width: var.$tablet) {
+            grid-template-columns: 1fr;
+            gap: func.rem(30);
+        }
+    }
+
+    &__inner {}
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: func.rem(30);
+
+        @media (max-width: var.$tablet) {
+            gap: func.rem(15);
+        }
+    }
+
+    &__image {
+        padding: func.rem(0) func.rem(0) func.prc(257, 510) func.rem(0);
+    }
+
+    &__text {
+        color: var.$mainGreyColor;
+        line-height: func.part(20, 16);
+
+        &:not(:last-child) {
+            margin: func.rem(0) func.rem(0) func.rem(10) func.rem(0);
+        }
+    }
+
+    &__button {}
+}
+
+.inner-bikes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: func.rem(16);
+
+    @media (max-width: var.$mobile) {
+        grid-template-columns: 1fr;
+        gap: func.rem(10);
+    }
+
+    &__item {
+        background-color: var.$mainDarkColor;
+        border-radius: func.rem(10);
+        color: var.$mainWhiteColor;
+        padding: func.rem(50) func.rem(40) func.rem(30) func.rem(25);
+        position: relative;
+    }
+
+    &__title {
+        display: inline-block;
+        max-width: func.rem(180);
+        color: var.$mainWhiteColor;
+        font-size: func.rem(20);
+        line-height: func.part(25, 20);
+        transition: color 0.5s ease 0s;
+
+        &:not(:last-child) {
+            margin: func.rem(0) func.rem(0) func.rem(25) func.rem(0);
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: var.$mainOrangeColor;
+            }
+        }
+    }
+
+    &__text {
+        line-height: func.part(20, 16);
+        position: relative;
+    }
+
+    &__icon {
+        position: absolute;
+        top: func.rem(20);
+        right: func.rem(20);
+        pointer-events: none;
+    }
+}
+
+// =======================================================================================================
+.advantages {
+    padding: func.rem(80) func.rem(0);
+
+    @media (max-width: var.$tablet) {
+        padding: func.rem(45) func.rem(0);
+    }
+
+    @media (max-width: var.$mobile) {
+        padding: func.rem(30) func.rem(0);
+    }
+
+    &__container {}
+
+    &__title {
+        max-width: func.rem(430);
+        margin: func.rem(0) func.rem(0) func.rem(50) func.rem(0);
+
+        @media (max-width: var.$tablet) {
+            margin: func.rem(0) func.rem(0) func.rem(20) func.rem(0);
+        }
+    }
+
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) 0.4fr;
+        gap: func.rem(50);
+
+        @media (max-width: func.em(1301, 16)) {
+            gap: func.rem(20);
+        }
+
+        @media (max-width: var.$tablet) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item-bg {
+        background: center/ cover no-repeat url("../img/advantages/bg.jpg");
+
+        @media (max-width: var.$tablet) {
+            display: none;
+        }
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: func.rem(20);
+
+        @media (max-width: var.$tablet) {
+            padding: func.rem(0) func.rem(20);
+        }
+
+        @media (max-width: var.$mobileSmall) {
+            grid-template-columns: 1fr;
+            gap: func.rem(10);
+        }
+    }
+
+    &__item-bg-2 {
+        background: center/ cover no-repeat url("../img/advantages/bg-2.jpg");
+
+        @media (max-width: var.$tablet) {
+            display: none;
+        }
+    }
+}
+
+.item-advantages {
+    min-height: func.rem(260);
+    background-color: var.$mainOrangeColor;
+    border-radius: func.rem(10);
+    color: var.$mainWhiteColor;
+    padding: func.rem(30);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: func.rem(20);
+    position: relative;
+
+    @media (max-width: var.$mobileSmall) {
+        min-height: func.rem(160);
+        gap: func.rem(10);
+    }
+
+    &__title {
+        font-size: func.rem(20);
+        line-height: func.part(25, 20);
+        text-transform: uppercase;
+        position: relative;
+    }
+
+    &__text {
+        font-weight: 300;
+        line-height: func.part(20, 16);
+        position: relative;
+    }
+
+    &__link {
+        color: var.$mainWhiteColor;
+        transition: color 0.5s ease 0s;
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: var.$mainBlackColor;
+            }
+        }
+    }
+}
+
+// =======================================================================================================
+.contacts {
+    padding: func.rem(40) func.rem(0);
+    background: 80%/ contain no-repeat url("../img/contacts/bg.jpg"), var.$bannerColor;
+
+    @media (max-width: var.$tablet) {
+        background: left/ cover no-repeat url("../img/contacts/bg.jpg"), var.$bannerColor;
+    }
+
+    @media (max-width: var.$mobile) {
+        padding: func.rem(30) func.rem(0);
+        background: 30%/ cover no-repeat url("../img/contacts/bg.jpg"), var.$bannerColor;
+    }
+
+    &__container {}
+
+    &__inner {
+        max-width: func.rem(600);
+    }
+
+    &__title {
+        max-width: func.rem(500);
+        color: var.$mainWhiteColor;
+        margin: func.rem(0) func.rem(0) func.rem(40) func.rem(0);
+
+        @media (max-width: var.$tablet) {
+            margin: func.rem(0) func.rem(0) func.rem(20) func.rem(0);
+        }
+    }
+}

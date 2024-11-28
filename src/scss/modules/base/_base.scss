@@ -1,0 +1,286 @@
+// * import functions
+@use '../tools/functions' as func;
+// * import variables
+@use '../tools/variables' as var;
+
+// =======================================================================================================
+// * _ibg - адаптивные картинки, видео
+._ibg {
+    position: relative;
+
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    }
+}
+
+// =======================================================================================================
+// * Базовые стили для spoller`а
+._spoller-body {
+    background-color: #fff;
+    border-radius: func.rem(10);
+
+    padding: 0;
+    color: transparent;
+    line-height: 0;
+    overflow: hidden;
+    transition: line-height .8s ease 0s, color .5s ease 0s, padding .8s ease 0s;
+}
+
+._spoller-body._active {
+    background-color: var.$mainBlackColor;
+    border: func.rem(2) solid var.$mainGreyColor;
+    line-height: func.part(20, 16);
+    padding: func.rem(35) func.rem(25);
+    color: var.$mainWhiteColor;
+}
+
+._spoller-link {
+    color: inherit;
+}
+
+// .spoller__button:focus-visible,
+// .spoller__link:focus-visible {}
+
+// =======================================================================================================
+// * Базовые стили для modal`s
+// .modal {
+//     position: fixed;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     margin: 0;
+
+//     display: block;
+//     opacity: 0;
+//     visibility: hidden;
+//     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .7);
+//     transition: opacity .5s ease 0s, visibility .5s ease 0s, box-shadow .5s ease 0s;
+// }
+
+// .modal[open] {
+//     opacity: 1;
+//     visibility: visible;
+// }
+
+// .modal::backdrop {
+//     background-color: #00000000;
+// }
+
+// =======================================================================================================
+// * Базовые стили для табов
+._tab-content {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.5s ease 0s;
+    position: absolute;
+    width: 0;
+    height: 0;
+
+    &._active {
+        opacity: 1;
+        visibility: visible;
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// =======================================================================================================
+// * Базовые стили для checkbox`ов
+._checkbox-real {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+
+    &:checked+._checkbox-custom {
+        background-color: var.$mainOrangeColor;
+    }
+
+    &:checked+._checkbox-custom::before {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    &:focus+._checkbox-custom {
+        box-shadow: 0px 0px 0px func.rem(1) var.$mainWhiteColor, 0px 0px func.rem(10) var.$mainWhiteColor;
+    }
+}
+
+._checkbox-custom {
+    display: inline-block;
+    width: func.rem(24);
+    height: func.rem(24);
+    border: func.rem(2) solid var.$greyTwoColor;
+    border-radius: func.rem(5);
+    background-color: var.$mainWhiteColor;
+    transition: background-color 0.3s ease 0s;
+    position: relative;
+
+    &::before {
+        content: '';
+        display: inline-block;
+        width: func.rem(15);
+        height: func.rem(14);
+        background: center/ contain no-repeat url("../img/general/check.svg");
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        transition: transform .8s ease 0s;
+    }
+}
+
+// =======================================================================================================
+// * Базовые стили для radio-buttons
+._radio-real {
+    width: 0;
+    height: 0;
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+
+    &:checked+._radio-custom::before {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    &:focus+._radio-custom {
+        box-shadow: 0px 0px 0px func.rem(1) var.$greyThreeColor, 0px 0px func.rem(10) var.$greyThreeColor;
+    }
+}
+
+._radio-custom {
+    display: inline-block;
+    width: func.rem(32);
+    height: func.rem(32);
+    background-color: #ACB690;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+        content: '';
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        border: func.rem(5) solid var.$greyThreeColor;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        transition: transform 0.5s ease 0s;
+    }
+}
+
+// =======================================================================================================
+// *custom select
+.select {
+    position: relative;
+
+    &__button {
+        display: block;
+        width: 100%;
+        text-align: left;
+        border: func.rem(2) solid var.$greyThreeColor;
+        border-radius: func.rem(10);
+        background: #fff;
+        padding: func.rem(20) func.rem(44) func.rem(20) func.rem(16);
+        font-weight: 500;
+        font-size: func.rem(16);
+        line-height: func.part(20, 16);
+        color: var.$greyTwoColor;
+
+        &._active {
+            outline: func.rem(2) solid #000;
+        }
+    }
+
+    &__inner {
+        position: relative;
+    }
+
+    &__icon {
+        display: inline-block;
+        width: func.rem(20);
+        height: func.rem(20);
+        position: absolute;
+        top: 50%;
+        right: func.rem(15);
+        transform: translateY(-50%);
+        transition: transform 0.5s ease 0s;
+        pointer-events: none;
+
+        &._active {
+            transform: translateY(-50%) rotate(-180deg);
+        }
+    }
+
+    &__list {
+        position: absolute;
+        top: func.rem(64);
+        left: 0;
+        z-index: 10;
+        background: #fff;
+        box-shadow: 0px func.rem(4) func.rem(8) rgba(176, 198, 225, .5);
+        overflow: hidden;
+        border-radius: func.rem(10);
+        width: 100%;
+        font-weight: 500;
+        font-size: func.rem(16);
+
+        &._active {}
+    }
+
+    &__item {
+        cursor: pointer;
+        background: #fff;
+        transition: background 0.5s ease 0s;
+        // ========
+        padding: 0;
+        color: transparent;
+        line-height: 0;
+        overflow: hidden;
+        transition: line-height .8s ease 0s, color .5s ease 0s, padding .8s ease 0s;
+        // ======
+
+        &_first {
+            border-radius: func.rem(5) func.rem(5) 0 0;
+        }
+
+        &_last {
+            border-radius: 0 0 func.rem(5) func.rem(5);
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                background: rgba(176, 198, 225, .25);
+            }
+        }
+
+        &._active {
+            border: func.rem(2) solid var.$greyThreeColor;
+            border-bottom: 0;
+            line-height: func.part(20, 16);
+            padding: func.rem(12) func.rem(20);
+            color: var.$greyTwoColor;
+        }
+
+        &_last._active {
+            border-bottom: func.rem(2) solid var.$greyThreeColor;
+        }
+    }
+
+    &__input {
+        display: none;
+    }
+}
+
+._focus-visible {
+    background: rgba(176, 198, 225, .25);
+}

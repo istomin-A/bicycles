@@ -1,0 +1,258 @@
+// * import functions
+@use 'tools/functions' as func;
+// * import variables
+@use 'tools/variables' as var;
+
+// =======================================================================================================
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    width: 100%;
+    transition: background-color 0.5s ease 0s;
+    background-color: rgba(16, 16, 16, .8);
+
+    &._active {
+        box-shadow: 0 0 func.rem(29) func.rem(-8) rgba(0, 0, 0, .8);
+    }
+
+    &__container {}
+
+    &__body {
+        display: grid;
+        grid-template-columns: func.rem(90) 1fr;
+        align-items: center;
+        gap: func.rem(100);
+        min-height: func.rem(105);
+        padding: func.rem(5) func.rem(0);
+        transition: min-height 0.5s ease 0s;
+
+        &._active {
+            min-height: func.rem(80);
+        }
+
+        @media (max-width: var.$mobile) {
+            grid-template-columns: func.rem(70) 1fr;
+            gap: func.rem(20);
+        }
+    }
+
+    &__inner {
+        display: grid;
+        grid-template-columns: 1fr func.rem(180) func.rem(40);
+        align-items: center;
+        gap: func.rem(50);
+
+        @media (max-width: var.$tablet) {
+            gap: func.rem(20);
+            grid-template-columns: 1fr func.rem(40);
+        }
+    }
+
+    &__actions {}
+}
+
+.actions-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: func.rem(15);
+    row-gap: func.rem(10);
+
+    @media (max-width: var.$tablet) {
+        justify-self: center;
+    }
+
+    &__inner {
+        position: relative;
+    }
+
+    &__icon {
+        display: block;
+        width: func.rem(22);
+        height: func.rem(22);
+        stroke: var.$mainWhiteColor;
+        stroke-width: 1.5;
+        transition: stroke 0.5s ease 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                stroke: var.$mainOrangeColor;
+            }
+        }
+
+        @media (max-width: var.$mobile) {
+            width: func.rem(24);
+            height: func.rem(24);
+        }
+
+        &_search {
+            pointer-events: none;
+        }
+    }
+
+    &__search {
+        padding: func.rem(5);
+        background-color: transparent;
+
+        @media (any-hover: hover) {
+            &:hover .actions-header__icon_search {
+                stroke: var.$mainOrangeColor;
+            }
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        padding: func.rem(5);
+    }
+}
+
+.menu {
+
+    &__title {
+        font-family: var.$secondFont;
+        font-weight: 600;
+        font-size: func.rem(32);
+        text-transform: uppercase;
+        color: var.$mainBlackColor;
+        margin: func.rem(0) func.rem(0) func.rem(40) func.rem(0);
+
+        @media (max-width: func.em(1300, 16)) {
+            font-size: func.rem(26);
+        }
+
+        @media (max-width: var.$tablet) {
+            display: none;
+        }
+    }
+
+    &__inner {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 26%;
+        height: 100%;
+        overflow: auto;
+        background-color: var.$mainWhiteColor;
+        padding: func.rem(105) func.rem(35) func.rem(40) func.rem(35);
+        transition: right 0.5s ease 0s;
+
+        @media (max-width: var.$tablet) {
+            width: 100%;
+        }
+
+        &._active {
+            right: 0;
+        }
+    }
+
+    &__logo {
+        display: none;
+
+        @media (max-width: var.$tablet) {
+            display: block;
+            position: absolute;
+            top: func.rem(40);
+            left: func.rem(35);
+        }
+    }
+
+    &__body {
+        @media (max-width: var.$tablet) {
+            text-transform: uppercase;
+        }
+
+        @media (max-width: var.$mobile) {
+            text-transform: capitalize;
+        }
+    }
+
+    &__list {}
+
+    &__item {
+        &:not(:last-child) {
+            margin: func.rem(0) func.rem(0) func.rem(15) func.rem(0);
+        }
+    }
+
+    &__link {
+        font-weight: 500;
+        font-size: func.rem(18);
+        line-height: func.part(28, 18);
+        color: var.$mainBlackColor;
+        transition: color 0.5s ease 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: var.$mainOrangeColor;
+            }
+        }
+    }
+}
+
+// =======================================================================================================
+.burger {
+    display: block;
+    position: relative;
+    height: func.rem(18);
+    width: func.rem(32);
+    z-index: 5;
+    background-color: transparent;
+
+    &::before,
+    &::after,
+    span {
+        position: absolute;
+        right: 0;
+        height: 10%;
+        width: 100%;
+        transition: left 0.3s ease 0s;
+        background-color: var.$mainWhiteColor;
+        transition: all 0.3s ease 0s;
+    }
+
+    &::after,
+    span {
+        width: 75%;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+    }
+
+    &::before {
+        top: 0;
+    }
+
+    &::after {
+        bottom: 0;
+    }
+
+    span {
+        top: 50%;
+        transform: scale(1) translate(0px, -50%);
+    }
+
+    &._active {
+
+        span {
+            transform: scale(0) translate(0px, -50%);
+        }
+
+        &::before {
+            background-color: var.$lightGreyColor;
+            top: 50%;
+            transform: rotate(-45deg) translate(0px, -50%);
+        }
+
+        &::after {
+            background-color: var.$lightGreyColor;
+            width: 100%;
+            bottom: 50%;
+            transform: rotate(45deg) translate(0px, 50%);
+        }
+    }
+}

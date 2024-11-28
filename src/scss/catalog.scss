@@ -1,0 +1,252 @@
+// * import functions
+@use 'modules/tools/functions' as func;
+// * import variables
+@use 'modules/tools/variables' as var;
+
+// =======================================================================================================
+.catalog {
+    padding: func.rem(60) func.rem(0) func.rem(80) func.rem(0);
+
+    @media (max-width: var.$tablet) {
+        padding: func.rem(40) func.rem(0) func.rem(60) func.rem(0);
+    }
+
+    @media (max-width: var.$mobile) {
+        padding: func.rem(20) func.rem(0) func.rem(40) func.rem(0);
+    }
+
+    &__container {}
+
+    &__body {
+        display: grid;
+        grid-template-columns: func.rem(290) 1fr;
+        gap: func.rem(40);
+
+        @media (max-width: var.$tablet) {
+            grid-template-columns: 1fr;
+            gap: func.rem(20);
+        }
+    }
+
+    &__filter {}
+
+    &__main {}
+}
+
+.filter-catalog {
+    padding: func.rem(10);
+
+    @media (max-width: var.$tablet) {
+        padding: func.rem(10) func.rem(30) func.rem(0) func.rem(30);
+    }
+
+    @media (max-width: var.$mobile) {
+        padding: func.rem(0) func.rem(10);
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: func.rem(18);
+        line-height: func.part(28, 18);
+        color: var.$mainDarkColor;
+        margin: func.rem(0) func.rem(0) func.rem(20) func.rem(0);
+
+        @media (max-width: var.$tablet) {
+            margin: func.rem(0) func.rem(0) func.rem(10) func.rem(0);
+        }
+
+        &_center {
+            text-align: center;
+            font-size: func.rem(24);
+            line-height: func.part(30, 24);
+        }
+
+        &_more {
+            margin: func.rem(0) func.rem(0) func.rem(50) func.rem(0);
+        }
+    }
+
+    &__inner {
+        border-top: func.rem(2) solid var.$greyThreeColor;
+        padding: func.rem(25) func.rem(0);
+
+        @media (max-width: var.$tablet) {
+            padding: func.rem(10) func.rem(0);
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        gap: func.rem(16);
+    }
+
+    &__label {
+        display: inline-flex;
+        align-items: center;
+        gap: func.rem(10);
+        cursor: pointer;
+    }
+
+    &__price {}
+}
+
+.price-filter {
+
+    &__inputs {
+        display: flex;
+        align-items: center;
+        gap: func.rem(16);
+    }
+
+    &__input {
+        flex: 0 1 50%;
+        width: 50%;
+        border-radius: func.rem(10);
+        border: func.rem(2) solid var.$greyThreeColor;
+        min-height: func.rem(46);
+        font-weight: 400;
+        font-size: func.rem(16);
+        line-height: func.part(20, 16);
+        color: var.$greyTwoColor;
+        padding: func.rem(10);
+        text-align: center;
+    }
+
+    &__line {
+        font-size: func.rem(16);
+        line-height: func.part(20, 16);
+        color: var.$mainBlackColor;
+    }
+
+    &__range {
+        margin: func.rem(0) func.rem(0) func.rem(25) func.rem(0);
+
+        @media (max-width: var.$tablet) {
+            margin: func.rem(0) func.rem(0) func.rem(15) func.rem(0);
+        }
+    }
+}
+
+.main-catalog {
+
+    &__inner {
+        max-width: func.rem(290);
+
+        &:not(:last-child) {
+            margin: func.rem(0) func.rem(0) func.rem(20) func.rem(0);
+        }
+    }
+
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(func.rem(270), 1fr));
+        gap: func.rem(40);
+
+        &:not(:last-child) {
+            margin: func.rem(0) func.rem(0) func.rem(40) func.rem(0);
+        }
+
+        @media (max-width: var.$tablet) {
+            gap: func.rem(20);
+
+            &:not(:last-child) {
+                margin: func.rem(0) func.rem(0) func.rem(20) func.rem(0);
+            }
+        }
+    }
+}
+
+// =======================================================================================================
+.pagging {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: func.rem(10);
+
+    &__button {
+        padding: func.rem(5) func.rem(10);
+        background-color: transparent;
+        border-radius: func.rem(5);
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: var.$greyThreeColor;
+            }
+        }
+
+        &_more {
+            display: flex;
+            align-items: center;
+
+            @media (max-width: var.$mobileSmall) {
+                display: none;
+            }
+        }
+    }
+
+    &__prev {}
+
+    &__arrow {
+        display: block;
+        width: func.rem(15);
+        height: func.rem(20);
+        pointer-events: none;
+
+        &_left {
+            transform: rotate(90deg);
+        }
+
+        &_active {}
+
+        &_right {
+            transform: rotate(-90deg);
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: func.rem(10);
+    }
+
+    &__item {
+
+        &_pre-last {
+            @media (max-width: var.$mobile) {
+                display: none;
+            }
+        }
+
+        &_last {
+            @media (max-width: var.$mobile) {
+                display: none;
+            }
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        padding: func.rem(10) func.rem(16);
+        color: var.$mainBlackColor;
+        line-height: func.part(20, 16);
+        border: func.rem(2) solid var.$greyThreeColor;
+        border-radius: func.rem(5);
+        background-color: var.$mainWhiteColor;
+        transition: color 0.5s ease 0s, background-color 0.8s ease 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: var.$mainWhiteColor;
+                background-color: var.$mainOrangeColor;
+            }
+        }
+
+        &_active {
+            color: var.$mainWhiteColor;
+            background-color: var.$mainOrangeColor;
+        }
+    }
+
+    &__next {}
+}

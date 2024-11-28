@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('html/head.html',{
+"title": "Главная"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/header.html',{})
+        <main class="main">
+            <section class="page-header">
+                <div class="page-header__inner">
+                    <div class="page-header__container _container">
+                        <nav class="breadbcrumbs breadbcrumbs_margin">
+                            <ul class="breadbcrumbs__list">
+                                <li class="breadbcrumbs__item">
+                                    <a href="#" class="breadbcrumbs__link">Главная /</a>
+                                </li>
+                                <li class="breadbcrumbs__item">
+                                    <a href="#" class="breadbcrumbs__link">Велосипеды /</a>
+                                </li>
+                                <li class="breadbcrumbs__item">
+                                    <span class="breadbcrumbs__current">Горные велосипеды</span>
+                                </li>
+                            </ul>
+                        </nav>
+                        <h1 class="page-header__title">Горные велосипеды</h1>
+                    </div>
+                </div>
+            </section>
+            <div class="catalog">
+                <div class="catalog__container _container">
+                    <div class="catalog__body">
+                        <div class="catalog__filter filter-catalog">
+                            <div class="filter-catalog__title filter-catalog__title_center">Фильтр</div>
+                            <div class="filter-catalog__inner">
+                                <div class="filter-catalog__title">Категории товара</div>
+                                <div class="filter-catalog__body">
+                                    <label class="filter-catalog__label">
+                                        <input type="checkbox" name="" class="filter-catalog__checkbox _checkbox-real">
+                                        <span class="filter-catalog__checkbox-custom _checkbox-custom"></span>
+                                        <span class="filter-catalog__checkbox-info">Велосипеды для триатлона</span>
+                                    </label>
+                                    <label class="filter-catalog__label">
+                                        <input type="checkbox" name="" class="filter-catalog__checkbox _checkbox-real">
+                                        <span class="filter-catalog__checkbox-custom _checkbox-custom"></span>
+                                        <span class="filter-catalog__checkbox-info">Горные велосипеды</span>
+                                    </label>
+                                    <label class="filter-catalog__label">
+                                        <input type="checkbox" name="" class="filter-catalog__checkbox _checkbox-real">
+                                        <span class="filter-catalog__checkbox-custom _checkbox-custom"></span>
+                                        <span class="filter-catalog__checkbox-info">Городские велосипеды</span>
+                                    </label>
+                                    <label class="filter-catalog__label">
+                                        <input type="checkbox" name="" class="filter-catalog__checkbox _checkbox-real">
+                                        <span class="filter-catalog__checkbox-custom _checkbox-custom"></span>
+                                        <span class="filter-catalog__checkbox-info">Гравийные велосипеды</span>
+                                    </label>
+                                    <label class="filter-catalog__label">
+                                        <input type="checkbox" name="" class="filter-catalog__checkbox _checkbox-real">
+                                        <span class="filter-catalog__checkbox-custom _checkbox-custom"></span>
+                                        <span class="filter-catalog__checkbox-info">Двухподвесные велосипеды</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filter-catalog__inner">
+                                <div class="filter-catalog__title filter-catalog__title_more">Цена</div>
+                                <div class="filter-catalog__price price-filter">
+                                    <div class="price-filter__range" id="price-range"></div>
+                                    <div class="price-filter__inputs">
+                                        <input id="price-range-from" type="text" autocomplete="off" name=""
+                                            class="price-filter__input" value="500" min="500">
+                                        <span class="price-filter__line">-</span>
+                                        <input id="price-range-to" type="text" autocomplete="off" name=""
+                                            class="price-filter__input" value="300000" max="300000">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter-catalog__inner">
+                                <div class="filter-catalog__title">Бренд</div>
+                                <div class="filter-catalog__body">
+                                    <label class="filter-catalog__label">
+                                        <input type="checkbox" name="" class="filter-catalog__checkbox _checkbox-real">
+                                        <span class="filter-catalog__checkbox-custom _checkbox-custom"></span>
+                                        <span class="filter-catalog__checkbox-info">Bianci</span>
+                                    </label>
+                                    <label class="filter-catalog__label">
+                                        <input type="checkbox" name="" class="filter-catalog__checkbox _checkbox-real">
+                                        <span class="filter-catalog__checkbox-custom _checkbox-custom"></span>
+                                        <span class="filter-catalog__checkbox-info">BMC</span>
+                                    </label>
+                                    <label class="filter-catalog__label">
+                                        <input type="checkbox" name="" class="filter-catalog__checkbox _checkbox-real">
+                                        <span class="filter-catalog__checkbox-custom _checkbox-custom"></span>
+                                        <span class="filter-catalog__checkbox-info">Ciclistino</span>
+                                    </label>
+                                    <label class="filter-catalog__label">
+                                        <input type="checkbox" name="" class="filter-catalog__checkbox _checkbox-real">
+                                        <span class="filter-catalog__checkbox-custom _checkbox-custom"></span>
+                                        <span class="filter-catalog__checkbox-info">Cipollini</span>
+                                    </label>
+                                    <label class="filter-catalog__label">
+                                        <input type="checkbox" name="" class="filter-catalog__checkbox _checkbox-real">
+                                        <span class="filter-catalog__checkbox-custom _checkbox-custom"></span>
+                                        <span class="filter-catalog__checkbox-info">Colnago</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filter-catalog__inner">
+                                <div class="filter-catalog__title">Цвет</div>
+                                <div class="radio-choice">
+                                    <label class="radio-choice__label">
+                                        <input type="radio" name="" class="radio-choice__radio _radio-real">
+                                        <span class="radio-choice__radio-custom _radio-custom"></span>
+                                    </label>
+                                    <label class="radio-choice__label">
+                                        <input type="radio" name="" class="radio-choice__radio _radio-real">
+                                        <span
+                                            class="radio-choice__radio-custom radio-choice__radio-custom_yellow _radio-custom"></span>
+                                    </label>
+                                    <label class="radio-choice__label">
+                                        <input type="radio" name="" class="radio-choice__radio _radio-real">
+                                        <span
+                                            class="radio-choice__radio-custom radio-choice__radio-custom_green _radio-custom"></span>
+                                    </label>
+                                    <label class="radio-choice__label">
+                                        <input type="radio" name="" class="radio-choice__radio _radio-real">
+                                        <span
+                                            class="radio-choice__radio-custom radio-choice__radio-custom_blue _radio-custom"></span>
+                                    </label>
+                                    <label class="radio-choice__label">
+                                        <input type="radio" name="" class="radio-choice__radio _radio-real">
+                                        <span
+                                            class="radio-choice__radio-custom radio-choice__radio-custom_black _radio-custom"></span>
+                                    </label>
+                                    <label class="radio-choice__label">
+                                        <input type="radio" name="" class="radio-choice__radio _radio-real">
+                                        <span
+                                            class="radio-choice__radio-custom radio-choice__radio-custom_aqua _radio-custom"></span>
+                                    </label>
+                                    <label class="radio-choice__label">
+                                        <input type="radio" name="" class="radio-choice__radio _radio-real">
+                                        <span
+                                            class="radio-choice__radio-custom radio-choice__radio-custom_grey _radio-custom"></span>
+                                    </label>
+                                    <label class="radio-choice__label">
+                                        <input type="radio" name="" class="radio-choice__radio _radio-real">
+                                        <span
+                                            class="radio-choice__radio-custom radio-choice__radio-custom_orange _radio-custom"></span>
+                                    </label>
+                                    <label class="radio-choice__label">
+                                        <input type="radio" name="" class="radio-choice__radio _radio-real">
+                                        <span
+                                            class="radio-choice__radio-custom radio-choice__radio-custom_pink _radio-custom"></span>
+                                    </label>
+                                    <label class="radio-choice__label">
+                                        <input type="radio" name="" class="radio-choice__radio _radio-real">
+                                        <span
+                                            class="radio-choice__radio-custom radio-choice__radio-custom_black-grey _radio-custom"></span>
+                                    </label>
+                                    <label class="radio-choice__label">
+                                        <input type="radio" name="" class="radio-choice__radio _radio-real">
+                                        <span
+                                            class="radio-choice__radio-custom radio-choice__radio-custom_light-green _radio-custom"></span>
+                                    </label>
+                                    <label class="radio-choice__label">
+                                        <input type="radio" name="" class="radio-choice__radio _radio-real">
+                                        <span
+                                            class="radio-choice__radio-custom radio-choice__radio-custom_red _radio-custom"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filter-catalog__inner">
+                                <button class="filter-catalog__button button button_border">Сбросить фильтры</button>
+                            </div>
+                        </div>
+                        <div class="catalog__main main-catalog">
+                            <div class="main-catalog__inner">
+                                <div class="select">
+                                    <div class="select__inner">
+                                        <button type="button" class="select__button" aria-expanded="false"
+                                            aria-controls="select-list">Сортировка от последнего</button>
+                                        <svg class="select__icon">
+                                            <use xlink:href="@img/icons/icons.svg#arrow"></use>
+                                        </svg>
+                                    </div>
+                                    <ul class="select__list" id="select-list" aria-hidden="true">
+                                        <li class="select__item select__item_first _focus-visible"
+                                            data-value="sort-from-last">Сортировка от последнего</li>
+                                        <li class="select__item" data-value="sort-popular">По популярности</li>
+                                        <li class="select__item" data-value="sort-rating">По рейтингу</li>
+                                        <li class="select__item" data-value="sort-price-increasing">Цены: по возрастанию
+                                        </li>
+                                        <li class="select__item select__item_last" data-value="sort-price-descending">
+                                            Цены:
+                                            по убыванию</li>
+                                    </ul>
+                                    <input type="text" class="select__input" name="select-category" value="">
+                                </div>
+                            </div>
+                            <div class="main-catalog__body">
+                                <article class="product-card">
+                                    <a href="#" class="product-card__image _ibg">
+                                        <img src="@img/product-card/bike-green.png" alt="Зеленый велосипед"
+                                            loading="lazy">
+                                    </a>
+                                    <a href="#" class="product-card__title-link">
+                                        <h3 class="product-card__title">
+                                            Bianchi AQUILA L DURA ACE DI2 TEAM JUMBO 2021
+                                        </h3>
+                                    </a>
+                                    <span class="product-card__price">84 840 ₽</span>
+                                    <a href="#" class="product-card__button button button_one-click">
+                                        <svg class="button__icon">
+                                            <use xlink:href="@img/icons/icons.svg#click"></use>
+                                        </svg>
+                                        <span>В 1 клик</span>
+                                    </a>
+                                    <img class="product-card__flag" src="@img/product-card/icons/flag-italy.png" alt=""
+                                        loading="lazy" width="88" height="46">
+                                    <span class="product-card__status product-card__status_red">Распродано</span>
+                                </article>
+                                <article class="product-card">
+                                    <a href="#" class="product-card__image _ibg">
+                                        <img src="@img/product-card/bike-dark.png" alt="Темный велосипед"
+                                            loading="lazy">
+                                    </a>
+                                    <a href="#" class="product-card__title-link">
+                                        <h3 class="product-card__title">
+                                            Trek Verve 2 Disc Lithium Grey HYBD 2022 Verve 245
+                                        </h3>
+                                    </a>
+                                    <span class="product-card__price">89 300 ₽</span>
+                                    <a href="#" class="product-card__button button button_one-click">
+                                        <svg class="button__icon">
+                                            <use xlink:href="@img/icons/icons.svg#click"></use>
+                                        </svg>
+                                        <span>В 1 клик</span>
+                                    </a>
+                                    <img class="product-card__flag" src="@img/product-card/icons/flag-USA.png" alt=""
+                                        loading="lazy" width="88" height="46">
+                                    <span class="product-card__status">В наличии</span>
+                                </article>
+                                <article class="product-card">
+                                    <a href="#" class="product-card__image _ibg">
+                                        <img src="@img/product-card/bike-lite_green.png" alt="Светло зеленый велосипед"
+                                            loading="lazy">
+                                    </a>
+                                    <a href="#" class="product-card__title-link">
+                                        <h3 class="product-card__title">
+                                            Trek Marlin 4 Aloha ATB 27.5 2022 POt cat bad
+                                        </h3>
+                                    </a>
+                                    <span class="product-card__price">73 300 ₽</span>
+                                    <a href="#" class="product-card__button button button_one-click">
+                                        <svg class="button__icon">
+                                            <use xlink:href="@img/icons/icons.svg#click"></use>
+                                        </svg>
+                                        <span>В 1 клик</span>
+                                    </a>
+                                    <img class="product-card__flag" src="@img/product-card/icons/flag-spain.png" alt=""
+                                        loading="lazy" width="88" height="46">
+                                    <span class="product-card__status">В наличии</span>
+                                </article>
+                                <article class="product-card">
+                                    <a href="#" class="product-card__image _ibg">
+                                        <img src="@img/product-card/bike-red_track.png" alt="Красный велосипед"
+                                            loading="lazy">
+                                    </a>
+                                    <a href="#" class="product-card__title-link">
+                                        <h3 class="product-card__title">
+                                            Scott Scale 700 SL 2016 Aloha ATB 389 KJU13
+                                        </h3>
+                                    </a>
+                                    <span class="product-card__price">64 840 ₽</span>
+                                    <a href="#" class="product-card__button button button_one-click">
+                                        <svg class="button__icon">
+                                            <use xlink:href="@img/icons/icons.svg#click"></use>
+                                        </svg>
+                                        <span>В 1 клик</span>
+                                    </a>
+                                    <img class="product-card__flag" src="@img/product-card/icons/flag-italy.png" alt=""
+                                        loading="lazy" width="88" height="46">
+                                    <span class="product-card__status product-card__status_red">Распродано</span>
+                                </article>
+                                <article class="product-card">
+                                    <a href="#" class="product-card__image _ibg">
+                                        <img src="@img/product-card/bike-black.png" alt="Черный велосипед"
+                                            loading="lazy">
+                                    </a>
+                                    <a href="#" class="product-card__title-link">
+                                        <h3 class="product-card__title">
+                                            Orbea RUDE 10 Черный 2022 NEt 550 Pey fet
+                                        </h3>
+                                    </a>
+                                    <span class="product-card__price">84 840 ₽</span>
+                                    <a href="#" class="product-card__button button button_one-click">
+                                        <svg class="button__icon">
+                                            <use xlink:href="@img/icons/icons.svg#click"></use>
+                                        </svg>
+                                        <span>В 1 клик</span>
+                                    </a>
+                                    <img class="product-card__flag" src="@img/product-card/icons/flag-switzerland.png"
+                                        alt="" loading="lazy" width="88" height="46">
+                                    <span class="product-card__status">В наличии</span>
+                                </article>
+                                <article class="product-card">
+                                    <a href="#" class="product-card__image _ibg">
+                                        <img src="@img/product-card/bike-red.png" alt="Красный велосипед"
+                                            loading="lazy">
+                                    </a>
+                                    <a href="#" class="product-card__title-link">
+                                        <h3 class="product-card__title">
+                                            Bianchi AQUILA L DURA ACE DI2 TEAM JUMBO 2021
+                                        </h3>
+                                    </a>
+                                    <span class="product-card__price">54 840 ₽</span>
+                                    <a href="#" class="product-card__button button button_one-click">
+                                        <svg class="button__icon">
+                                            <use xlink:href="@img/icons/icons.svg#click"></use>
+                                        </svg>
+                                        <span>В 1 клик</span>
+                                    </a>
+                                    <img class="product-card__flag" src="@img/product-card/icons/flag-france.png" alt=""
+                                        loading="lazy" width="88" height="46">
+                                    <span class="product-card__status">В наличии</span>
+                                </article>
+                                <article class="product-card">
+                                    <a href="#" class="product-card__image _ibg">
+                                        <img src="@img/product-card/bike-green.png" alt="Зеленый велосипед"
+                                            loading="lazy">
+                                    </a>
+                                    <a href="#" class="product-card__title-link">
+                                        <h3 class="product-card__title">
+                                            Bianchi AQUILA L DURA ACE DI2 TEAM JUMBO 2021
+                                        </h3>
+                                    </a>
+                                    <span class="product-card__price">84 840 ₽</span>
+                                    <a href="#" class="product-card__button button button_one-click">
+                                        <svg class="button__icon">
+                                            <use xlink:href="@img/icons/icons.svg#click"></use>
+                                        </svg>
+                                        <span>В 1 клик</span>
+                                    </a>
+                                    <img class="product-card__flag" src="@img/product-card/icons/flag-italy.png" alt=""
+                                        loading="lazy" width="88" height="46">
+                                    <span class="product-card__status product-card__status_red">Распродано</span>
+                                </article>
+                                <article class="product-card">
+                                    <a href="#" class="product-card__image _ibg">
+                                        <img src="@img/product-card/bike-dark.png" alt="Темный велосипед"
+                                            loading="lazy">
+                                    </a>
+                                    <a href="#" class="product-card__title-link">
+                                        <h3 class="product-card__title">
+                                            Trek Verve 2 Disc Lithium Grey HYBD 2022 Verve 245
+                                        </h3>
+                                    </a>
+                                    <span class="product-card__price">89 300 ₽</span>
+                                    <a href="#" class="product-card__button button button_one-click">
+                                        <svg class="button__icon">
+                                            <use xlink:href="@img/icons/icons.svg#click"></use>
+                                        </svg>
+                                        <span>В 1 клик</span>
+                                    </a>
+                                    <img class="product-card__flag" src="@img/product-card/icons/flag-USA.png" alt=""
+                                        loading="lazy" width="88" height="46">
+                                    <span class="product-card__status">В наличии</span>
+                                </article>
+                                <article class="product-card">
+                                    <a href="#" class="product-card__image _ibg">
+                                        <img src="@img/product-card/bike-lite_green.png" alt="Светло зеленый велосипед"
+                                            loading="lazy">
+                                    </a>
+                                    <a href="#" class="product-card__title-link">
+                                        <h3 class="product-card__title">
+                                            Trek Marlin 4 Aloha ATB 27.5 2022 POt cat bad
+                                        </h3>
+                                    </a>
+                                    <span class="product-card__price">73 300 ₽</span>
+                                    <a href="#" class="product-card__button button button_one-click">
+                                        <svg class="button__icon">
+                                            <use xlink:href="@img/icons/icons.svg#click"></use>
+                                        </svg>
+                                        <span>В 1 клик</span>
+                                    </a>
+                                    <img class="product-card__flag" src="@img/product-card/icons/flag-spain.png" alt=""
+                                        loading="lazy" width="88" height="46">
+                                    <span class="product-card__status">В наличии</span>
+                                </article>
+                                <article class="product-card">
+                                    <a href="#" class="product-card__image _ibg">
+                                        <img src="@img/product-card/bike-red_track.png" alt="Красный велосипед"
+                                            loading="lazy">
+                                    </a>
+                                    <a href="#" class="product-card__title-link">
+                                        <h3 class="product-card__title">
+                                            Scott Scale 700 SL 2016 Aloha ATB 389 KJU13
+                                        </h3>
+                                    </a>
+                                    <span class="product-card__price">64 840 ₽</span>
+                                    <a href="#" class="product-card__button button button_one-click">
+                                        <svg class="button__icon">
+                                            <use xlink:href="@img/icons/icons.svg#click"></use>
+                                        </svg>
+                                        <span>В 1 клик</span>
+                                    </a>
+                                    <img class="product-card__flag" src="@img/product-card/icons/flag-italy.png" alt=""
+                                        loading="lazy" width="88" height="46">
+                                    <span class="product-card__status product-card__status_red">Распродано</span>
+                                </article>
+                                <article class="product-card">
+                                    <a href="#" class="product-card__image _ibg">
+                                        <img src="@img/product-card/bike-black.png" alt="Черный велосипед"
+                                            loading="lazy">
+                                    </a>
+                                    <a href="#" class="product-card__title-link">
+                                        <h3 class="product-card__title">
+                                            Orbea RUDE 10 Черный 2022 NEt 550 Pey fet
+                                        </h3>
+                                    </a>
+                                    <span class="product-card__price">84 840 ₽</span>
+                                    <a href="#" class="product-card__button button button_one-click">
+                                        <svg class="button__icon">
+                                            <use xlink:href="@img/icons/icons.svg#click"></use>
+                                        </svg>
+                                        <span>В 1 клик</span>
+                                    </a>
+                                    <img class="product-card__flag" src="@img/product-card/icons/flag-switzerland.png"
+                                        alt="" loading="lazy" width="88" height="46">
+                                    <span class="product-card__status">В наличии</span>
+                                </article>
+                                <article class="product-card">
+                                    <a href="#" class="product-card__image _ibg">
+                                        <img src="@img/product-card/bike-red.png" alt="Красный велосипед"
+                                            loading="lazy">
+                                    </a>
+                                    <a href="#" class="product-card__title-link">
+                                        <h3 class="product-card__title">
+                                            Bianchi AQUILA L DURA ACE DI2 TEAM JUMBO 2021
+                                        </h3>
+                                    </a>
+                                    <span class="product-card__price">54 840 ₽</span>
+                                    <a href="#" class="product-card__button button button_one-click">
+                                        <svg class="button__icon">
+                                            <use xlink:href="@img/icons/icons.svg#click"></use>
+                                        </svg>
+                                        <span>В 1 клик</span>
+                                    </a>
+                                    <img class="product-card__flag" src="@img/product-card/icons/flag-france.png" alt=""
+                                        loading="lazy" width="88" height="46">
+                                    <span class="product-card__status">В наличии</span>
+                                </article>
+                            </div>
+                            <div class="pagging">
+                                <button type="button" class="pagging__button pagging__button_more pagging__prev"
+                                    aria-label="Кнопка переключения страниц на первую">
+                                    <svg class="pagging__arrow pagging__arrow_left">
+                                        <use xlink:href="@img/icons/icons.svg#arrow"></use>
+                                    </svg>
+                                    <svg class="pagging__arrow pagging__arrow_left">
+                                        <use xlink:href="@img/icons/icons.svg#arrow"></use>
+                                    </svg>
+                                </button>
+                                <button type="button" class="pagging__button pagging__prev"
+                                    aria-label="Кнопка переключения страниц назад">
+                                    <svg class="pagging__arrow pagging__arrow_left">
+                                        <use xlink:href="@img/icons/icons.svg#arrow"></use>
+                                    </svg>
+                                </button>
+                                <ul class="pagging__list">
+                                    <li class="pagging__item"><a href="#"
+                                            class="pagging__link pagging__link_active">1</a></li>
+                                    <li class="pagging__item"><a href="#" class="pagging__link">2</a></li>
+                                    <li class="pagging__item pagging__item_pre-last"><a href="#"
+                                            class="pagging__link">3</a></li>
+                                    <li class="pagging__item pagging__item_last"><a href="#" class="pagging__link">4</a>
+                                    </li>
+                                    <li class="pagging__item"><a href="#" class="pagging__link"
+                                            aria-label="pagging dotts">...</a></li>
+                                </ul>
+                                <button type="button" class="pagging__button pagging__next"
+                                    aria-label="Кнопка переключения страниц вперед">
+                                    <svg class="pagging__arrow pagging__arrow_active pagging__arrow_right">
+                                        <use xlink:href="@img/icons/icons.svg#arrow"></use>
+                                    </svg>
+                                </button>
+                                <button type="button" class="pagging__button pagging__button_more pagging__prev"
+                                    aria-label="Кнопка переключения страниц на первую">
+                                    <svg class="pagging__arrow pagging__arrow_right">
+                                        <use xlink:href="@img/icons/icons.svg#arrow"></use>
+                                    </svg>
+                                    <svg class="pagging__arrow pagging__arrow_right">
+                                        <use xlink:href="@img/icons/icons.svg#arrow"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="contacts">
+                <div class="contacts__container _container">
+                    <h2 class="contacts__title section-title">Подпишитесь на наши новости</h2>
+                    <div class="contacts__inner">
+                        <form action="#" class="main-form">
+                            <div class="main-form__inner">
+                                <input type="email" required name="form[subscription]" placeholder="E-mail"
+                                    class="main-form__input main-form__input_white">
+                                <button type="submit" class="main-form__button button">Подписаться</button>
+                            </div>
+                            <label class="main-form__label">
+                                <input type="checkbox" required name="subscription-checkbox"
+                                    class="main-form__checkbox _checkbox-real">
+                                <span class="main-form__checkbox-custom _checkbox-custom"></span>
+                                <span class="main-form__checkbox-info">Согласен(на) на обработку персональных
+                                    данных</span>
+                            </label>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('html/footer.html',{})
+    </div>
+
+    @@include('html/modals.html',{})
+
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('html/head.html',{
+"title": "Главная"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/header.html',{})
+        <main class="main">
+            <section class="intro">
+                <div class="intro__container _container">
+                    <h1 class="intro__title">Электро велосипеды</h1>
+                    <p class="intro__text main-text">
+                        Cento10 Hybrid — это гоночный велосипед с помогающим педалированию
+                        электроприводом, который устанавливает новый, очень высокий стандарт для данной категории
+                    </p>
+                    <a href="#" class="intro__button button">Подробнее</a>
+                </div>
+            </section>
+            <div class="sub-intro">
+                <div class="sub-intro__body">
+                    <div class="sub-intro__item sub-intro__item_first">
+                        <div class="sub-intro__text">
+                            Экстремальное вождение на горном велосипеде
+                        </div>
+                        <div class="sub-intro__link">
+                            <a href="#">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="sub-intro__item sub-intro__item_center">
+                        <div class="sub-intro__text">
+                            Велосипеды для профессионалов
+                        </div>
+                        <div class="sub-intro__link">
+                            <a href="#">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="sub-intro__item sub-intro__item_last">
+                        <div class="sub-intro__text">
+                            Долгая поездка на шоссейном велосипеде
+                        </div>
+                        <div class="sub-intro__link">
+                            <a href="#">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="product-slider">
+                <div class="product-slider__container _container">
+                    <h2 class="product-slider__title section-title">Новинки</h2>
+                    <div class="product-slider__slider swiper">
+                        <div class="product-slider__swiper swiper-wrapper">
+                            <div class="product-slider__slide swiper-slide">
+                                <article class="product-card">
+                                    <a href="#" class="product-card__image _ibg">
+                                        <img src="@img/product-card/bike-green.png" alt="Зеленый велосипед"
+                                            loading="lazy">
+                                    </a>
+                                    <a href="#" class="product-card__title-link">
+                                        <h3 class="product-card__title">
+                                            Bianchi AQUILA L DURA ACE DI2 TEAM JUMBO 2021
+                                        </h3>
+                                    </a>
+                                    <span class="product-card__price">84 840 ₽</span>
+                                    <a href="#" class="product-card__button button button_one-click">
+                                        <svg class="button__icon">
+                                            <use xlink:href="@img/icons/icons.svg#click"></use>
+                                        </svg>
+                                        <span>В 1 клик</span>
+                                    </a>
+                                    <img class="product-card__flag" src="@img/product-card/icons/flag-italy.png" alt=""
+                                        loading="lazy" width="88" height="46">
+                                    <span class="product-card__status product-card__status_red">Распродано</span>
+                                </article>
+                            </div>
+                            <div class="product-slider__slide swiper-slide">
+                                <article class="product-card">
+                                    <a href="#" class="product-card__image _ibg">
+                                        <img src="@img/product-card/bike-dark.png" alt="Темный велосипед"
+                                            loading="lazy">
+                                    </a>
+                                    <a href="#" class="product-card__title-link">
+                                        <h3 class="product-card__title">
+                                            Trek Verve 2 Disc Lithium Grey HYBD 2022 Verve 245
+                                        </h3>
+                                    </a>
+                                    <span class="product-card__price">89 300 ₽</span>
+                                    <a href="#" class="product-card__button button button_one-click">
+                                        <svg class="button__icon">
+                                            <use xlink:href="@img/icons/icons.svg#click"></use>
+                                        </svg>
+                                        <span>В 1 клик</span>
+                                    </a>
+                                    <img class="product-card__flag" src="@img/product-card/icons/flag-USA.png" alt=""
+                                        loading="lazy" width="88" height="46">
+                                    <span class="product-card__status">В наличии</span>
+                                </article>
+                            </div>
+                            <div class="product-slider__slide swiper-slide">
+                                <article class="product-card">
+                                    <a href="#" class="product-card__image _ibg">
+                                        <img src="@img/product-card/bike-lite_green.png" alt="Светло зеленый велосипед"
+                                            loading="lazy">
+                                    </a>
+                                    <a href="#" class="product-card__title-link">
+                                        <h3 class="product-card__title">
+                                            Trek Marlin 4 Aloha ATB 27.5 2022 POt cat bad
+                                        </h3>
+                                    </a>
+                                    <span class="product-card__price">73 300 ₽</span>
+                                    <a href="#" class="product-card__button button button_one-click">
+                                        <svg class="button__icon">
+                                            <use xlink:href="@img/icons/icons.svg#click"></use>
+                                        </svg>
+                                        <span>В 1 клик</span>
+                                    </a>
+                                    <img class="product-card__flag" src="@img/product-card/icons/flag-spain.png" alt=""
+                                        loading="lazy" width="88" height="46">
+                                    <span class="product-card__status">В наличии</span>
+                                </article>
+                            </div>
+                            <div class="product-slider__slide swiper-slide">
+                                <article class="product-card">
+                                    <a href="#" class="product-card__image _ibg">
+                                        <img src="@img/product-card/bike-red_track.png" alt="Красный велосипед"
+                                            loading="lazy">
+                                    </a>
+                                    <a href="#" class="product-card__title-link">
+                                        <h3 class="product-card__title">
+                                            Scott Scale 700 SL 2016 Aloha ATB 389 KJU13
+                                        </h3>
+                                    </a>
+                                    <span class="product-card__price">64 840 ₽</span>
+                                    <a href="#" class="product-card__button button button_one-click">
+                                        <svg class="button__icon">
+                                            <use xlink:href="@img/icons/icons.svg#click"></use>
+                                        </svg>
+                                        <span>В 1 клик</span>
+                                    </a>
+                                    <img class="product-card__flag" src="@img/product-card/icons/flag-italy.png" alt=""
+                                        loading="lazy" width="88" height="46">
+                                    <span class="product-card__status product-card__status_red">Распродано</span>
+                                </article>
+                            </div>
+                            <div class="product-slider__slide swiper-slide">
+                                <article class="product-card">
+                                    <a href="#" class="product-card__image _ibg">
+                                        <img src="@img/product-card/bike-black.png" alt="Черный велосипед"
+                                            loading="lazy">
+                                    </a>
+                                    <a href="#" class="product-card__title-link">
+                                        <h3 class="product-card__title">
+                                            Orbea RUDE 10 Черный 2022 NEt 550 Pey fet
+                                        </h3>
+                                    </a>
+                                    <span class="product-card__price">84 840 ₽</span>
+                                    <a href="#" class="product-card__button button button_one-click">
+                                        <svg class="button__icon">
+                                            <use xlink:href="@img/icons/icons.svg#click"></use>
+                                        </svg>
+                                        <span>В 1 клик</span>
+                                    </a>
+                                    <img class="product-card__flag" src="@img/product-card/icons/flag-switzerland.png"
+                                        alt="" loading="lazy" width="88" height="46">
+                                    <span class="product-card__status">В наличии</span>
+                                </article>
+                            </div>
+                            <div class="product-slider__slide swiper-slide">
+                                <article class="product-card">
+                                    <a href="#" class="product-card__image _ibg">
+                                        <img src="@img/product-card/bike-red.png" alt="Красный велосипед"
+                                            loading="lazy">
+                                    </a>
+                                    <a href="#" class="product-card__title-link">
+                                        <h3 class="product-card__title">
+                                            Bianchi AQUILA L DURA ACE DI2 TEAM JUMBO 2021
+                                        </h3>
+                                    </a>
+                                    <span class="product-card__price">54 840 ₽</span>
+                                    <a href="#" class="product-card__button button button_one-click">
+                                        <svg class="button__icon">
+                                            <use xlink:href="@img/icons/icons.svg#click"></use>
+                                        </svg>
+                                        <span>В 1 клик</span>
+                                    </a>
+                                    <img class="product-card__flag" src="@img/product-card/icons/flag-france.png" alt=""
+                                        loading="lazy" width="88" height="46">
+                                    <span class="product-card__status">В наличии</span>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    <div class="product-slider__inner">
+                        <a href="#" class="product-slider__more">показать все</a>
+                    </div>
+                </div>
+            </section>
+            <section class="catalog-intro">
+                <div class="catalog-intro__container _container">
+                    <h2 class="catalog-intro__title section-title">Каталог</h2>
+                    <div class="catalog-intro__body">
+                        <a href="#" class="catalog-intro__item catalog-intro__item_full-row">
+                            <span
+                                class="catalog-intro__span catalog-intro__span_center-y section-title">Велосипеды</span>
+                            <img width="700" height="250" class="catalog-intro__img catalog-intro__img_bike"
+                                src="@img/catalog-intro/bike.png" alt="Велосипед" loading="lazy">
+                        </a>
+                        <a href="#" class="catalog-intro__item catalog-intro__item_full-column">
+                            <span class="catalog-intro__span catalog-intro__span_center-x section-title">Trade-in</span>
+                            <img width="400" height="282" class="catalog-intro__img catalog-intro__img_trade-in"
+                                src="@img/catalog-intro/trade-in.png" alt="Велосипед" loading="lazy">
+                        </a>
+                        <a href="#" class="catalog-intro__item catalog-intro__item_small">
+                            <span
+                                class="catalog-intro__span catalog-intro__span_text-less catalog-intro__span_center-y section-title">Запчасти</span>
+                            <img width="130" height="190" class="catalog-intro__img catalog-intro__img_spare-parts"
+                                src="@img/catalog-intro/spare-parts.png" alt="Колеса" loading="lazy">
+                        </a>
+                        <a href="#" class="catalog-intro__item catalog-intro__item_bottom">
+                            <span
+                                class="catalog-intro__span catalog-intro__span_text-less catalog-intro__span_bottom section-title">Аксессуары</span>
+                            <img width="300" height="210" class="catalog-intro__img catalog-intro__img_top"
+                                src="@img/catalog-intro/accessories.png" alt="Аксессуары" loading="lazy">
+                        </a>
+                        <a href="#" class="catalog-intro__item catalog-intro__item_little-big">
+                            <span
+                                class="catalog-intro__span catalog-intro__span_text-less section-title">Экипировка</span>
+                            <img width="225" height="140" class="catalog-intro__img catalog-intro__img_equipment"
+                                src="@img/catalog-intro/equipment.png" alt="Шлем" loading="lazy">
+                        </a>
+                        <a href="#" class="catalog-intro__item catalog-intro__item_adaptive">
+                            <span
+                                class="catalog-intro__span catalog-intro__span_text-less section-title">Велостанки</span>
+                            <img width="170" height="200" class="catalog-intro__img catalog-intro__img_bicycle-stands"
+                                src="@img/catalog-intro/bicycle-stands.png" alt="Велостанок" loading="lazy">
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="best">
+                <div class="best__container _container">
+                    <h2 class="best__title section-title">Лучшие модели для зимней езды</h2>
+                    <div class="two-slider swiper">
+                        <div class="two-slider__swiper swiper-wrapper">
+                            <div class="two-slider__slide swiper-slide">
+                                <article class="product-card">
+                                    <a href="#" class="product-card__image _ibg">
+                                        <img src="@img/product-card/bike-green.png" alt="Зеленый велосипед"
+                                            loading="lazy">
+                                    </a>
+                                    <a href="#" class="product-card__title-link">
+                                        <h3 class="product-card__title">
+                                            Bianchi AQUILA L DURA ACE DI2 TEAM JUMBO 2021
+                                        </h3>
+                                    </a>
+                                    <span class="product-card__price">84 840 ₽</span>
+                                    <a href="#" class="product-card__button button button_one-click">
+                                        <svg class="button__icon">
+                                            <use xlink:href="@img/icons/icons.svg#click"></use>
+                                        </svg>
+                                        <span>В 1 клик</span>
+                                    </a>
+                                    <img class="product-card__flag" src="@img/product-card/icons/flag-italy.png" alt=""
+                                        loading="lazy" width="88" height="46">
+                                    <span class="product-card__status product-card__status_red">Распродано</span>
+                                </article>
+                            </div>
+                            <div class="two-slider__slide swiper-slide">
+                                <article class="product-card">
+                                    <a href="#" class="product-card__image _ibg">
+                                        <img src="@img/product-card/bike-dark.png" alt="Темный велосипед"
+                                            loading="lazy">
+                                    </a>
+                                    <a href="#" class="product-card__title-link">
+                                        <h3 class="product-card__title">
+                                            Trek Verve 2 Disc Lithium Grey HYBD 2022 Verve 245
+                                        </h3>
+                                    </a>
+                                    <span class="product-card__price">89 300 ₽</span>
+                                    <a href="#" class="product-card__button button button_one-click">
+                                        <svg class="button__icon">
+                                            <use xlink:href="@img/icons/icons.svg#click"></use>
+                                        </svg>
+                                        <span>В 1 клик</span>
+                                    </a>
+                                    <img class="product-card__flag" src="@img/product-card/icons/flag-USA.png" alt=""
+                                        loading="lazy" width="88" height="46">
+                                    <span class="product-card__status">В наличии</span>
+                                </article>
+                            </div>
+                            <div class="two-slider__slide swiper-slide">
+                                <article class="product-card">
+                                    <a href="#" class="product-card__image _ibg">
+                                        <img src="@img/product-card/bike-lite_green.png" alt="Светло зеленый велосипед"
+                                            loading="lazy">
+                                    </a>
+                                    <a href="#" class="product-card__title-link">
+                                        <h3 class="product-card__title">
+                                            Trek Marlin 4 Aloha ATB 27.5 2022 POt cat bad
+                                        </h3>
+                                    </a>
+                                    <span class="product-card__price">73 300 ₽</span>
+                                    <a href="#" class="product-card__button button button_one-click">
+                                        <svg class="button__icon">
+                                            <use xlink:href="@img/icons/icons.svg#click"></use>
+                                        </svg>
+                                        <span>В 1 клик</span>
+                                    </a>
+                                    <img class="product-card__flag" src="@img/product-card/icons/flag-spain.png" alt=""
+                                        loading="lazy" width="88" height="46">
+                                    <span class="product-card__status">В наличии</span>
+                                </article>
+                            </div>
+                            <div class="two-slider__slide swiper-slide">
+                                <article class="product-card">
+                                    <a href="#" class="product-card__image _ibg">
+                                        <img src="@img/product-card/bike-red_track.png" alt="Красный велосипед"
+                                            loading="lazy">
+                                    </a>
+                                    <a href="#" class="product-card__title-link">
+                                        <h3 class="product-card__title">
+                                            Scott Scale 700 SL 2016 Aloha ATB 389 KJU13
+                                        </h3>
+                                    </a>
+                                    <span class="product-card__price">64 840 ₽</span>
+                                    <a href="#" class="product-card__button button button_one-click">
+                                        <svg class="button__icon">
+                                            <use xlink:href="@img/icons/icons.svg#click"></use>
+                                        </svg>
+                                        <span>В 1 клик</span>
+                                    </a>
+                                    <img class="product-card__flag" src="@img/product-card/icons/flag-italy.png" alt=""
+                                        loading="lazy" width="88" height="46">
+                                    <span class="product-card__status product-card__status_red">Распродано</span>
+                                </article>
+                            </div>
+                            <div class="two-slider__slide swiper-slide">
+                                <article class="product-card">
+                                    <a href="#" class="product-card__image _ibg">
+                                        <img src="@img/product-card/bike-black.png" alt="Черный велосипед"
+                                            loading="lazy">
+                                    </a>
+                                    <a href="#" class="product-card__title-link">
+                                        <h3 class="product-card__title">
+                                            Orbea RUDE 10 Черный 2022 NEt 550 Pey fet
+                                        </h3>
+                                    </a>
+                                    <span class="product-card__price">84 840 ₽</span>
+                                    <a href="#" class="product-card__button button button_one-click">
+                                        <svg class="button__icon">
+                                            <use xlink:href="@img/icons/icons.svg#click"></use>
+                                        </svg>
+                                        <span>В 1 клик</span>
+                                    </a>
+                                    <img class="product-card__flag" src="@img/product-card/icons/flag-switzerland.png"
+                                        alt="" loading="lazy" width="88" height="46">
+                                    <span class="product-card__status">В наличии</span>
+                                </article>
+                            </div>
+                            <div class="two-slider__slide swiper-slide">
+                                <article class="product-card">
+                                    <a href="#" class="product-card__image _ibg">
+                                        <img src="@img/product-card/bike-red.png" alt="Красный велосипед"
+                                            loading="lazy">
+                                    </a>
+                                    <a href="#" class="product-card__title-link">
+                                        <h3 class="product-card__title">
+                                            Bianchi AQUILA L DURA ACE DI2 TEAM JUMBO 2021
+                                        </h3>
+                                    </a>
+                                    <span class="product-card__price">54 840 ₽</span>
+                                    <a href="#" class="product-card__button button button_one-click">
+                                        <svg class="button__icon">
+                                            <use xlink:href="@img/icons/icons.svg#click"></use>
+                                        </svg>
+                                        <span>В 1 клик</span>
+                                    </a>
+                                    <img class="product-card__flag" src="@img/product-card/icons/flag-france.png" alt=""
+                                        loading="lazy" width="88" height="46">
+                                    <span class="product-card__status">В наличии</span>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="bikes">
+                <div class="bikes__container _container">
+                    <h2 class="bikes__title section-title">Горные велосипеды</h2>
+                    <div class="bikes__body">
+                        <div class="bikes__inner inner-bikes">
+                            <div class="inner-bikes__item">
+                                <a href="#" class="inner-bikes__title">Рама</a>
+                                <p class="inner-bikes__text">
+                                    Рама велосипеда является основой всей конструкции, определяя его прочность и
+                                    устойчивость.
+                                </p>
+                                <img src="@img/bikes/icons/bike.svg" alt="Иконка велосипеда" class="inner-bikes__icon"
+                                    loading="lazy">
+                            </div>
+                            <div class="inner-bikes__item">
+                                <a href="#" class="inner-bikes__title">Бортовой компьютер</a>
+                                <p class="inner-bikes__text">
+                                    Бортовой компьютер велосипеда предоставляет данные о скорости, расстоянии и других
+                                    параметрах.
+                                </p>
+                                <img src="@img/bikes/icons/comp.svg" alt="Бортовой компьютер" class="inner-bikes__icon"
+                                    loading="lazy">
+                            </div>
+                            <div class="inner-bikes__item">
+                                <a href="#" class="inner-bikes__title">Трансмиссия</a>
+                                <p class="inner-bikes__text">
+                                    Трансмиссия велосипеда обеспечивает плавное переключение передач и оптимизацию
+                                    усилий райдера для различных условий езды и рельефа.
+                                </p>
+                                <img src="@img/bikes/icons/transmission.svg" alt="Трансмиссия" class="inner-bikes__icon"
+                                    loading="lazy">
+                            </div>
+                            <div class="inner-bikes__item">
+                                <a href="#" class="inner-bikes__title">Оборудование</a>
+                                <p class="inner-bikes__text">
+                                    Оборудование велосипеда включает различные компоненты, такие как тормоза, шины и
+                                    передачи.
+                                </p>
+                                <img src="@img/bikes/icons/equipment.svg" alt="Оборудование" class="inner-bikes__icon"
+                                    loading="lazy">
+                            </div>
+                        </div>
+                        <div class="bikes__item">
+                            <div class="bikes__image _ibg">
+                                <img src="@img/bikes/main-photo.jpg" alt="Езда на горном велосипеде" loading="lazy">
+                            </div>
+                            <p class="bikes__text">
+                                Горный велосипед несмотря на свое название часто и активно используются в условиях
+                                города, так как обладает рядом характеристик, позволяющих сделать велопрогулку
+                                максимально приятной и комфортной
+                            </p>
+                            <div>
+                                <a href="#" class="bikes__button button">Каталог</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="advantages">
+                <div class="advantages__container _container">
+                    <h2 class="advantages__title section-title">Преимущества</h2>
+                </div>
+                <div class="advantages__body">
+                    <div class="advantages__item-bg"></div>
+                    <div class="advantages__item">
+                        <div class="item-advantages">
+                            <div class="item-advantages__title">
+                                БЕСПЛАТНАЯ ДОСТАВКА
+                            </div>
+                            <p class="item-advantages__text">
+                                Мы пользуемся всеми популярными видами доставки
+                            </p>
+                            <a href="#" class="item-advantages__link">
+                                Подробнее
+                            </a>
+                        </div>
+                        <div class="item-advantages">
+                            <div class="item-advantages__title">
+                                ОБМЕН И ВОЗВРАТ
+                            </div>
+                            <p class="item-advantages__text">
+                                Все товары обеспечены фирменной гарантией фирм-производителей
+                            </p>
+                            <a href="#" class="item-advantages__link">
+                                Подробнее
+                            </a>
+                        </div>
+                        <div class="item-advantages">
+                            <div class="item-advantages__title">
+                                ДОП. ОБСЛУЖИВАНИЕ
+                            </div>
+                            <p class="item-advantages__text">
+                                Мы выполняем ремонт велосипеда любой сложности
+                            </p>
+                            <a href="#" class="item-advantages__link">
+                                Подробнее
+                            </a>
+                        </div>
+                        <div class="item-advantages">
+                            <div class="item-advantages__title">
+                                ОНЛАЙН ОПЛАТА
+                            </div>
+                            <p class="item-advantages__text">
+                                Для удобства вы можете оплатить товар банковской картой через сайт
+                            </p>
+                            <a href="#" class="item-advantages__link">
+                                Подробнее
+                            </a>
+                        </div>
+                    </div>
+                    <div class="advantages__item-bg-2"></div>
+                </div>
+            </section>
+            <section class="product-slider">
+                <div class="product-slider__container _container">
+                    <h2 class="product-slider__title section-title">Экипировка</h2>
+                    <div class="product-slider__slider swiper">
+                        <div class="product-slider__swiper swiper-wrapper">
+                            <div class="product-slider__slide swiper-slide">
+                                <article class="product-card">
+                                    <a href="#" class="product-card__image _ibg">
+                                        <img src="@img/product-card/bike-green.png" alt="Зеленый велосипед"
+                                            loading="lazy">
+                                    </a>
+                                    <a href="#" class="product-card__title-link">
+                                        <h3 class="product-card__title">
+                                            Bianchi AQUILA L DURA ACE DI2 TEAM JUMBO 2021
+                                        </h3>
+                                    </a>
+                                    <span class="product-card__price">84 840 ₽</span>
+                                    <a href="#" class="product-card__button button button_one-click">
+                                        <svg class="button__icon">
+                                            <use xlink:href="@img/icons/icons.svg#click"></use>
+                                        </svg>
+                                        <span>В 1 клик</span>
+                                    </a>
+                                    <img class="product-card__flag" src="@img/product-card/icons/flag-italy.png" alt=""
+                                        loading="lazy" width="88" height="46">
+                                    <span class="product-card__status product-card__status_red">Распродано</span>
+                                </article>
+                            </div>
+                            <div class="product-slider__slide swiper-slide">
+                                <article class="product-card">
+                                    <a href="#" class="product-card__image _ibg">
+                                        <img src="@img/product-card/bike-dark.png" alt="Темный велосипед"
+                                            loading="lazy">
+                                    </a>
+                                    <a href="#" class="product-card__title-link">
+                                        <h3 class="product-card__title">
+                                            Trek Verve 2 Disc Lithium Grey HYBD 2022 Verve 245
+                                        </h3>
+                                    </a>
+                                    <span class="product-card__price">89 300 ₽</span>
+                                    <a href="#" class="product-card__button button button_one-click">
+                                        <svg class="button__icon">
+                                            <use xlink:href="@img/icons/icons.svg#click"></use>
+                                        </svg>
+                                        <span>В 1 клик</span>
+                                    </a>
+                                    <img class="product-card__flag" src="@img/product-card/icons/flag-USA.png" alt=""
+                                        loading="lazy" width="88" height="46">
+                                    <span class="product-card__status">В наличии</span>
+                                </article>
+                            </div>
+                            <div class="product-slider__slide swiper-slide">
+                                <article class="product-card">
+                                    <a href="#" class="product-card__image _ibg">
+                                        <img src="@img/product-card/bike-lite_green.png" alt="Светло зеленый велосипед"
+                                            loading="lazy">
+                                    </a>
+                                    <a href="#" class="product-card__title-link">
+                                        <h3 class="product-card__title">
+                                            Trek Marlin 4 Aloha ATB 27.5 2022 POt cat bad
+                                        </h3>
+                                    </a>
+                                    <span class="product-card__price">73 300 ₽</span>
+                                    <a href="#" class="product-card__button button button_one-click">
+                                        <svg class="button__icon">
+                                            <use xlink:href="@img/icons/icons.svg#click"></use>
+                                        </svg>
+                                        <span>В 1 клик</span>
+                                    </a>
+                                    <img class="product-card__flag" src="@img/product-card/icons/flag-spain.png" alt=""
+                                        loading="lazy" width="88" height="46">
+                                    <span class="product-card__status">В наличии</span>
+                                </article>
+                            </div>
+                            <div class="product-slider__slide swiper-slide">
+                                <article class="product-card">
+                                    <a href="#" class="product-card__image _ibg">
+                                        <img src="@img/product-card/bike-red_track.png" alt="Красный велосипед"
+                                            loading="lazy">
+                                    </a>
+                                    <a href="#" class="product-card__title-link">
+                                        <h3 class="product-card__title">
+                                            Scott Scale 700 SL 2016 Aloha ATB 389 KJU13
+                                        </h3>
+                                    </a>
+                                    <span class="product-card__price">64 840 ₽</span>
+                                    <a href="#" class="product-card__button button button_one-click">
+                                        <svg class="button__icon">
+                                            <use xlink:href="@img/icons/icons.svg#click"></use>
+                                        </svg>
+                                        <span>В 1 клик</span>
+                                    </a>
+                                    <img class="product-card__flag" src="@img/product-card/icons/flag-italy.png" alt=""
+                                        loading="lazy" width="88" height="46">
+                                    <span class="product-card__status product-card__status_red">Распродано</span>
+                                </article>
+                            </div>
+                            <div class="product-slider__slide swiper-slide">
+                                <article class="product-card">
+                                    <a href="#" class="product-card__image _ibg">
+                                        <img src="@img/product-card/bike-black.png" alt="Черный велосипед"
+                                            loading="lazy">
+                                    </a>
+                                    <a href="#" class="product-card__title-link">
+                                        <h3 class="product-card__title">
+                                            Orbea RUDE 10 Черный 2022 NEt 550 Pey fet
+                                        </h3>
+                                    </a>
+                                    <span class="product-card__price">84 840 ₽</span>
+                                    <a href="#" class="product-card__button button button_one-click">
+                                        <svg class="button__icon">
+                                            <use xlink:href="@img/icons/icons.svg#click"></use>
+                                        </svg>
+                                        <span>В 1 клик</span>
+                                    </a>
+                                    <img class="product-card__flag" src="@img/product-card/icons/flag-switzerland.png"
+                                        alt="" loading="lazy" width="88" height="46">
+                                    <span class="product-card__status">В наличии</span>
+                                </article>
+                            </div>
+                            <div class="product-slider__slide swiper-slide">
+                                <article class="product-card">
+                                    <a href="#" class="product-card__image _ibg">
+                                        <img src="@img/product-card/bike-red.png" alt="Красный велосипед"
+                                            loading="lazy">
+                                    </a>
+                                    <a href="#" class="product-card__title-link">
+                                        <h3 class="product-card__title">
+                                            Bianchi AQUILA L DURA ACE DI2 TEAM JUMBO 2021
+                                        </h3>
+                                    </a>
+                                    <span class="product-card__price">54 840 ₽</span>
+                                    <a href="#" class="product-card__button button button_one-click">
+                                        <svg class="button__icon">
+                                            <use xlink:href="@img/icons/icons.svg#click"></use>
+                                        </svg>
+                                        <span>В 1 клик</span>
+                                    </a>
+                                    <img class="product-card__flag" src="@img/product-card/icons/flag-france.png" alt=""
+                                        loading="lazy" width="88" height="46">
+                                    <span class="product-card__status">В наличии</span>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    <div class="product-slider__inner">
+                        <a href="#" class="product-slider__more">показать все</a>
+                    </div>
+                </div>
+            </section>
+            <section class="best best_no-bg">
+                <div class="best__container _container">
+                    <h2 class="best__title best__title_black section-title">Последние обзоры</h2>
+                    <div class="two-slider swiper">
+                        <div class="two-slider__swiper swiper-wrapper">
+                            <div class="two-slider__slide swiper-slide">
+                                <article class="review">
+                                    <a href="#" class="review__img _ibg">
+                                        <img src="@img/best/01.jpg" alt="Езда на велосипеде" loading="lazy">
+                                    </a>
+                                    <div class="review__body">
+                                        <time class="review__time" datetime="2023-01-25">25.01.2023</time>
+                                        <span class="review__review">#обзор</span>
+                                        <a href="#" class="review__link-title">
+                                            <h4 class="review__title">
+                                                BMC Kaius 01 идеальный гоночный гравийный велосипед
+                                            </h4>
+                                        </a>
+                                        <a href="#" class="review__more">
+                                            Подробнее
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="two-slider__slide swiper-slide">
+                                <article class="review">
+                                    <a href="#" class="review__img _ibg">
+                                        <img src="@img/best/02.jpg" alt="Езда на велосипеде" loading="lazy">
+                                    </a>
+                                    <div class="review__body">
+                                        <time class="review__time" datetime="2023-01-24">24.01.2023</time>
+                                        <span class="review__review">#обзор</span>
+                                        <a href="#" class="review__link-title">
+                                            <h4 class="review__title">
+                                                Первые поездки на новой гоночной ракете Wilier Urta
+                                            </h4>
+                                        </a>
+                                        <a href="#" class="review__more">
+                                            Подробнее
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="two-slider__slide swiper-slide">
+                                <article class="review">
+                                    <a href="#" class="review__img _ibg">
+                                        <img src="@img/best/03.jpg" alt="Велосипед" loading="lazy">
+                                    </a>
+                                    <div class="review__body">
+                                        <time class="review__time" datetime="2023-02-22">22.02.2023</time>
+                                        <span class="review__review">#обзор</span>
+                                        <a href="#" class="review__link-title">
+                                            <h4 class="review__title">
+                                                Все новые гоночные велосипеды BMC Fourstroke
+                                            </h4>
+                                        </a>
+                                        <a href="#" class="review__more">
+                                            Подробнее
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="two-slider__slide swiper-slide">
+                                <article class="review">
+                                    <a href="#" class="review__img _ibg">
+                                        <img src="@img/best/04.jpg" alt="Велосипед" loading="lazy">
+                                    </a>
+                                    <div class="review__body">
+                                        <time class="review__time" datetime="2023-02-22">22.02.2023</time>
+                                        <span class="review__review">#обзор</span>
+                                        <a href="#" class="review__link-title">
+                                            <h4 class="review__title">
+                                                Велосипед Wilier Grantismo SLR для шоссейных гонок
+                                            </h4>
+                                        </a>
+                                        <a href="#" class="review__more">
+                                            Подробнее
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="two-slider__slide swiper-slide">
+                                <article class="review">
+                                    <a href="#" class="review__img _ibg">
+                                        <img src="@img/best/02.jpg" alt="Езда на велосипеде" loading="lazy">
+                                    </a>
+                                    <div class="review__body">
+                                        <time class="review__time" datetime="2023-01-24">24.01.2023</time>
+                                        <span class="review__review">#обзор</span>
+                                        <a href="#" class="review__link-title">
+                                            <h4 class="review__title">
+                                                Первые поездки на новой гоночной ракете Wilier Urta
+                                            </h4>
+                                        </a>
+                                        <a href="#" class="review__more">
+                                            Подробнее
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="two-slider__slide swiper-slide">
+                                <article class="review">
+                                    <a href="#" class="review__img _ibg">
+                                        <img src="@img/best/03.jpg" alt="Велосипед" loading="lazy">
+                                    </a>
+                                    <div class="review__body">
+                                        <time class="review__time" datetime="2023-02-22">22.02.2023</time>
+                                        <span class="review__review">#обзор</span>
+                                        <a href="#" class="review__link-title">
+                                            <h4 class="review__title">
+                                                Все новые гоночные велосипеды BMC Fourstroke
+                                            </h4>
+                                        </a>
+                                        <a href="#" class="review__more">
+                                            Подробнее
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="contacts">
+                <div class="contacts__container _container">
+                    <h2 class="contacts__title section-title">Подпишитесь на наши новости</h2>
+                    <div class="contacts__inner">
+                        <form action="#" class="main-form">
+                            <div class="main-form__inner">
+                                <input type="email" required name="form[subscription]" placeholder="E-mail"
+                                    class="main-form__input main-form__input_white">
+                                <button type="submit" class="main-form__button button">Подписаться</button>
+                            </div>
+                            <label class="main-form__label">
+                                <input type="checkbox" required name="subscription-checkbox"
+                                    class="main-form__checkbox _checkbox-real">
+                                <span class="main-form__checkbox-custom _checkbox-custom"></span>
+                                <span class="main-form__checkbox-info">Согласен(на) на обработку персональных
+                                    данных</span>
+                            </label>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('html/footer.html',{})
+    </div>
+
+    @@include('html/modals.html',{})
+
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>
