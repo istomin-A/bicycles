@@ -1882,6 +1882,14 @@ body._lock {
   border: 0.125rem solid #101010;
 }
 
+.product-tab__content .product-tab__inner {
+  display: none;
+}
+
+.product-tab__content._active .product-tab__inner {
+  display: flex;
+}
+
 .product-tab__title {
   margin: 0rem 0rem 1rem 0rem;
 }

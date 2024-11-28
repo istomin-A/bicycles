@@ -373,8 +373,15 @@
     &__body {}
 
     &__content {
+        .product-tab__inner {
+            display: none;
+        }
 
-        &._active {}
+        &._active {
+            .product-tab__inner {
+                display: flex;
+            }
+        }
     }
 
     &__title {
